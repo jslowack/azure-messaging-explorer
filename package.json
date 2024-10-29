@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "An Electron application with React and TypeScript",
   "main": "./dist/main/index.js",
-  "author": "example.com",
+  "author": "jslowack",
+  "license": "UNLICENSED",
   "homepage": "https://electron-vite.org",
   "scripts": {
     "format": "prettier --write .",
