@@ -21,7 +21,16 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Publish to GitHub
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: npm run publish
+    - name: Build Electron app
+      run: npm run make
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: electron-app
+        path: out/make
+
+    # - name: Publish to GitHub
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #   run: npm run publish
